@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Sibam Sasmal | Full Stack Developer & AI/ML Enthusiast</title>
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Portfolio of Sibam Sasmal — Computer Science undergrad (B.Tech 2027) & Full Stack Developer specializing in Django, React, Python, and AI/ML computer vision applications." />
+    <meta name="keywords" content="Sibam Sasmal, Full Stack Developer, Django, React, Python, Deep Learning, Computer Vision, Portfolio, NIST University" />
+    <meta name="author" content="Sibam Sasmal" />
+    <meta name="theme-color" content="#E50914" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sibamsasmalsportfolio.vercel.app/" />
+    <meta property="og:title" content="Sibam Sasmal | Full Stack Developer & AI/ML Enthusiast" />
+    <meta property="og:description" content="Full Stack Developer shipping production products in Django, React, Java & AI/ML." />
+    <meta property="og:image" content="/animated_3d_portfolio_portrait.svg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sibamsasmalsportfolio.vercel.app/" />
+    <meta property="twitter:title" content="Sibam Sasmal | Full Stack Developer & AI/ML Enthusiast" />
+    <meta property="twitter:description" content="Full Stack Developer shipping production products in Django, React, Java & AI/ML." />
+    <meta property="twitter:image" content="/animated_3d_portfolio_portrait.svg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%23E50914%22/><text x=%2250%22 y=%2262%22 font-size=%2245%22 font-family=%22sans-serif%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22white%22>S</text></svg>" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Pre-paint Theme Script (Prevents Theme Flash) -->
+    <script>
+      (function() {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-brand-bgLight dark:bg-brand-bgDark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300 antialiased selection:bg-brand-red selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

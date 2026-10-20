@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* User Required Hero Portrait CSS */
+.hero-portrait {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+}
+
+/* Organic Blob for About Section (Matching Screenshot 4) */
+.about-avatar-blob {
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  transition: all 0.5s ease;
+}
+
+/* Safe area support for iOS devices */
+.safe-bottom {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+/* Subtle concentric pulse animation */
+@keyframes ringPulse {
+  0%, 100% {
+    transform: scale(0.98);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.95;
+  }
+}
+
+.animate-ring-pulse {
+  animation: ringPulse 4s ease-in-out infinite;
+}
+
+.animate-ring-pulse-delayed {
+  animation: ringPulse 4s ease-in-out infinite -2s;
+}
+
+/* Glassmorphism helpers */
+.glass-panel-dark {
+  background: rgba(22, 8, 14, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 9, 20, 0.2);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 9, 20, 0.15);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080305;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #080305;
+}
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #FEECEF;
+}
+::-webkit-scrollbar-thumb {
+  background: #E50914;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff3344;
+}

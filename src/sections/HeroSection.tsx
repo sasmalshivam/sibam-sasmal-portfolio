@@ -43,13 +43,16 @@ export const HeroSection: React.FC = () => {
             {/* Glowing Concentric Red Rings behind Avatar */}
             <ConcentricRings size={460} glowOpacity={0.35} />
 
-            {/* User Mandated Portrait Markup */}
-            <div className="relative z-10 transition-transform duration-500 hover:scale-[1.02]">
+            {/* User Mandated Portrait Markup with Reserved Aspect Ratio */}
+            <div className="relative z-10 transition-transform duration-500 hover:scale-[1.02] aspect-[520/780] w-full max-w-[520px]">
               <img
                 src="/animated_3d_portfolio_portrait.svg"
                 alt="Sibam Sasmal 3D portfolio portrait"
-                className="hero-portrait rounded-2xl drop-shadow-[0_15px_35px_rgba(229,9,20,0.35)]"
+                width={520}
+                height={780}
+                className="hero-portrait rounded-2xl drop-shadow-[0_15px_35px_rgba(229,9,20,0.35)] w-full h-auto block"
                 loading="eager"
+                fetchPriority="high"
               />
             </div>
           </div>

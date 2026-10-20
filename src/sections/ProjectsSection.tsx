@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Sparkles, Trophy, Calendar } from 'lucide-react';
 import { SectionBadge } from '../components/SectionBadge';
 import { ConcentricRings } from '../components/ConcentricRings';
+import { TechIcon } from '../components/TechIcon';
 import { portfolioData, Project } from '../data/portfolioData';
 
 type FilterTab = 'All' | 'AI-ML' | 'Web' | 'Hackathon';
@@ -135,14 +136,15 @@ export const ProjectsSection: React.FC = () => {
                 </div>
 
                 <div>
-                  {/* Tech Tags Chip Row */}
+                  {/* Tech Tags Chip Row with Official Tech Logos */}
                   <div className="flex flex-wrap gap-1.5 mb-6 pt-2 border-t border-brand-red/10 dark:border-white/5">
                     {project.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-brand-red/10 dark:bg-brand-red/15 text-slate-700 dark:text-slate-300 border border-brand-red/15"
+                        className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-brand-red/10 dark:bg-brand-red/15 text-slate-700 dark:text-slate-300 border border-brand-red/15 hover:border-brand-red/40 transition-colors"
                       >
-                        {tag}
+                        <TechIcon name={tag} className="w-3 h-3" />
+                        <span>{tag}</span>
                       </span>
                     ))}
                   </div>

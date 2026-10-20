@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { SectionBadge } from '../components/SectionBadge';
 import { SkillProgressRing } from '../components/SkillProgressRing';
 import { ConcentricRings } from '../components/ConcentricRings';
+import { TechIcon } from '../components/TechIcon';
 import { portfolioData } from '../data/portfolioData';
 
 export const SkillsSection: React.FC = () => {
@@ -30,7 +31,7 @@ export const SkillsSection: React.FC = () => {
           Technical proficiencies honed through end-to-end full-stack software delivery, national hackathons, and deep learning computer vision projects.
         </p>
 
-        {/* Top 6 Skills with Animated Progress Rings (as in reference screenshot 5) */}
+        {/* Top 6 Skills with Animated Progress Rings & Official Logos (as in reference screenshot 5) */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 w-full max-w-5xl mb-16">
           {topSkills.map((skill, idx) => (
             <div
@@ -48,7 +49,7 @@ export const SkillsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Skills Section Avatar + Categorized Skill Chips Grid */}
+        {/* Skills Section Avatar + Categorized Skill Chips with Logos Grid */}
         <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Section Avatar: Sibam in crimson hoodie with floating glowing tech logos */}
           <motion.div
@@ -69,7 +70,7 @@ export const SkillsSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Categorized Skill Chips */}
+          {/* Categorized Skill Chips with Official Logos */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             {skillCategories.map((cat, idx) => (
               <motion.div
@@ -87,9 +88,10 @@ export const SkillsSection: React.FC = () => {
                   {cat.skills.map((skill, sIdx) => (
                     <span
                       key={sIdx}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-brand-red/10 dark:bg-brand-red/15 text-slate-800 dark:text-slate-200 border border-brand-red/20 hover:border-brand-red/50 hover:scale-105 transition-all duration-200 cursor-default"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-brand-red/10 dark:bg-brand-red/15 text-slate-800 dark:text-slate-200 border border-brand-red/20 hover:border-brand-red/50 hover:scale-105 transition-all duration-200 cursor-default group"
                     >
-                      {skill}
+                      <TechIcon name={skill} className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+                      <span>{skill}</span>
                     </span>
                   ))}
                 </div>
